@@ -10,62 +10,83 @@
     tools:context=".activities.RegisterActivity">
 
     <ImageView
-        android:id="@+id/instagram_text"
+        android:id="@+id/instagram_textRegister"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_instagram_text" />
 
-    <EditText
-        android:id="@+id/username"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/bleu_de_france"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_below="@id/instagram_text"
+        android:layout_below="@id/instagram_textRegister"
         android:layout_marginTop="15dp"
-        android:background="@drawable/edit_text_background"
         android:hint="@string/username"
-        android:padding="10dp" />
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red">
 
-    <EditText
-        android:id="@+id/name"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_below="@id/username"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/edit_text_background"
-        android:hint="@string/name"
-        android:padding="10dp" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:layout_below="@id/name"
+        android:layout_below="@id/usernameTextInputLayout"
         android:layout_marginTop="15dp"
-        android:background="@drawable/edit_text_background"
         android:hint="@string/email"
-        android:padding="10dp" />
+        app:boxStrokeColor="@color/bleu_de_france"
+        app:endIconMode="clear_text"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red">
 
-    <EditText
-        android:id="@+id/password"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:layout_below="@id/email"
+        android:layout_below="@id/emailTextInputLayout"
         android:layout_marginTop="15dp"
-        android:background="@drawable/edit_text_background"
         android:hint="@string/password"
-        android:padding="10dp" />
+        app:boxStrokeColor="@color/bleu_de_france"
+        app:endIconMode="password_toggle"
+        app:helperText="Required*"
+        app:helperTextTextColor="@color/red">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            app:endIconMode="password_toggle" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/passwordTextInputLayout"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/password"
         android:background="@drawable/button_background"
         android:padding="10dp"
         android:text="@string/register" />
@@ -75,8 +96,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/register"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:text="@string/already_a_user_login"
-        android:layout_centerHorizontal="true"/>
+        android:text="@string/already_a_user_login" />
 
 </RelativeLayout>

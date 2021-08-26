@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="whisper">#eee</color>
     <color name="bleu_de_france">#3895ee</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
 </resources>
