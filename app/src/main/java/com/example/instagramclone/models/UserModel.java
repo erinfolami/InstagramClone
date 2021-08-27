@@ -8,6 +8,8 @@ public class UserModel {
     public String id;
     public String username;
     public String email;
+    public String bio;
+    public String imageUrl;
 
 
     public UserModel() {
